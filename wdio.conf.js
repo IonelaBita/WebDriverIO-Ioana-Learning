@@ -228,8 +228,9 @@ export const config = {
      * @param {ITestCaseHookParameter} world    world object containing information on pickle and test step
      * @param {object}                 context  Cucumber World object
      */
-    // beforeScenario: function (world, context) {
-    // },
+    beforeScenario: async function (world, context) {
+        await browser.maximizeWindow();
+    },
     /**
      *
      * Runs before a Cucumber Step.

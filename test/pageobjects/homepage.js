@@ -1,7 +1,6 @@
 class HomePage {
 
     async openAboutYou() {
-        await browser.maximizeWindow();
         await browser.url("https://www.aboutyou.ro/magazinul-tau");
         await browser.pause(3000);
       }

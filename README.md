@@ -2,6 +2,9 @@
 
 Run command: yarn test
 
+To enable Reporter for feature steps: Uncomment the "reporters: ['spec']," line in wdio.conf.js
+To make the browser open and run tests visibly: Remove '--headless' from the chromeOptions in wdio.conf.js
+
 Selectors:
 
 [id='hondacheck']

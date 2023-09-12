@@ -1,6 +1,6 @@
 # WebdriverIO-Learning
 
-Run command: npm run wdio
+Run command: yarn test
 
 Selectors:
 

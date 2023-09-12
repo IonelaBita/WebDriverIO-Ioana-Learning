@@ -21,9 +21,9 @@ export const config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: 
-        ['test/features/*.feature'],
-    
+    specs: [
+        'test/features/*.feature'
+    ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -151,7 +151,7 @@ export const config = {
         // <boolean> Enable this config to treat undefined definitions as warnings.
         ignoreUndefinedDefinitions: false
     },
-    
+
     //
     // =====
     // Hooks
@@ -272,7 +272,7 @@ export const config = {
      */
     // afterFeature: function (uri, feature) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {string} commandName hook command name

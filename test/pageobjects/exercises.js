@@ -1,4 +1,4 @@
-import homepage from '../pageobjects/homepage.js';
+import Generic from '../pageobjects/generic.js';
 class Exercises {
   sliceStringExercises() {
     let initialString = 'Ioana';
@@ -36,6 +36,11 @@ class Exercises {
     }
   }
 
+  /**
+   * This functions receives two parameters and depending on what they are, displays a console.log
+   * @param {string} ziua a string, indicating a day, e.g. 'Luni', 'Miercuri' etc.
+   * @param {string} vreme a string indicating the wheather, e.g. 'Insorita', 'Innorata'
+   */
   secondIfExercise(ziua, vreme) {
     console.log(`Ziua este ${ziua}, vremea este ${vreme}`);
 
@@ -146,6 +151,33 @@ class Exercises {
   returnExercise() {
     return 2;
   }
-}
 
+  numberType() {
+    let number = Generic.randomNumber();
+    console.log(
+      `>>> This is the value I receive from the randomNumberFunction ${number}`
+    );
+    if (isNaN(number)) {
+      console.log(
+        `>>>>>>> Ivalid data type: recived '${typeof number}', but expected 'number'`
+      );
+    } else if (number < 0 || number > 10) {
+      console.log(`>>>>>>> Please provide a number between 0 and 10`);
+    } else if (number % 2 === 0) {
+      console.log(`>>>>>>> The number is even`);
+    } else {
+      console.log(`>>>> The number is odd`);
+    }
+  }
+
+  forExercise() {
+    let list = [];
+    console.log(`Before entering for: ${list}`);
+    for (let i = 0; i <= 9; i++) {
+      console.log(`Iteratia ${i}`);
+      list.push(i);
+    }
+    console.log(`After exiting for: ${list}`);
+  }
+}
 export default new Exercises();

@@ -1,9 +1,12 @@
 # WebdriverIO-Learning
 
-Run command: yarn test
+Run command: yarn test '@tag'
+for ex: yarn test '@aboutyou'
 
 To enable Reporter for feature steps: Uncomment the "reporters: ['spec']," line in wdio.conf.js
 To make the browser open and run tests visibly: Remove '--headless' from the chromeOptions in wdio.conf.js
+
+"test": "wdio wdio.conf.js --cucumberOpts.tagExpression"
 
 Selectors:
 

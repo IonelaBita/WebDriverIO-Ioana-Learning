@@ -1,7 +1,6 @@
 import { When } from '@wdio/cucumber-framework';
 import Exercises from '../pageobjects/exercises.js';
-import homepage from '../pageobjects/homepage.js';
-
+import Generic from '../pageobjects/generic.js';
 When(/^I run exercices$/, function () {
   Exercises.sliceStringExercises();
   Exercises.subStringExercises();
@@ -32,4 +31,12 @@ When(/^I execute sortMethod$/, function () {
 
 When(/^I execute callReturn$/, function () {
   Exercises.callReturn();
+});
+
+When(/^The number is I want to see$/, function () {
+  Exercises.numberType();
+});
+
+When(/^Execute for function$/, function () {
+  Exercises.forExercise();
 });

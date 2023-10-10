@@ -40,3 +40,7 @@ When(/^The number is I want to see$/, function () {
 When(/^Execute for function$/, function () {
   Exercises.forExercise();
 });
+
+When(/^Execute while function$/, function () {
+  Exercises.whileExercise();
+});

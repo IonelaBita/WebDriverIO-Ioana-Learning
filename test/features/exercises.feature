@@ -20,5 +20,10 @@ Feature: Exercises
   Scenario: As a user, I want to learn for function 
     When Execute for function
 
+  @exercise5
+  Scenario: As a user, I want to learn while function 
+    When Execute while function
+
+
 
     

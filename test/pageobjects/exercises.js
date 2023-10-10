@@ -179,5 +179,10 @@ class Exercises {
     }
     console.log(`After exiting for: ${list}`);
   }
+
+  whileExercise() {
+    {
+    }
+  }
 }
 export default new Exercises();

@@ -49,25 +49,16 @@ Feature: Homepage
 
     When I click on the "Hotels Travelers Button"
     When I set the travelers count to "8"
-    When I wait for "3" seconds
-    # When I set the travelers count to "5"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "8"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "1"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "14"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "9"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "13"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "2"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "1"
-    # When I wait for "3" seconds
-    # When I set the travelers count to "8"
-    # When I set the travelers count to "1"
+    When I set the travelers count to "5"
+    When I set the travelers count to "8"
+    When I set the travelers count to "1"
+    When I set the travelers count to "14"
+    When I set the travelers count to "9"
+    When I set the travelers count to "13"
+    When I set the travelers count to "2"
+    When I set the travelers count to "1"
+    When I set the travelers count to "8"
+    When I set the travelers count to "1"
     # When I find the "Hotels Increase Number Adults" and I set the adults traveler increase to "5"
     # When I find the "Hotels Decrease Number Adults" and I set the adults traveler decrease to "1"
     # When I find the "Hotels Increase Number Children" and I set the children traveler count to "1"
@@ -75,3 +66,5 @@ Feature: Homepage
     # # When I click on the "Hotels Traveler Done Button"
     # And I click on the "Hotels Search Button"
     # When I wait for "3" seconds
+
+   

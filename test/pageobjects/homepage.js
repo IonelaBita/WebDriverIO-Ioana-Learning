@@ -112,64 +112,34 @@ class HomePage {
     await $(selector).addValue(destination);
   }
 
-  // forFunction() {
-  //   let number = [];
-  //   console.log(`Before entering for: ${number}`);
-  //   for (let i = 1; i <= 14; i++) {
-  //     console.log(`Iteratia ${i}`);
-  //     number.push(i);
-  //   }
-  //   console.log(`After exiting for: ${list}`);
-  //   return number;
-  // }
-
-  // async countTravelers(element, count) {
-  //   let selector = this.obtainSelector(element);
-  //   let forf = this.forFunction();
-  //   await $(selector).click(forf);
-  // }
-
   async increaseOrDecreaseValue(desiredCount) {
-    desiredCount = parseInt(desiredCount);
+    desiredCount = parseInt(desiredCount); // parseInt() for convert string to number
     if (desiredCount <= 0 || desiredCount > 14) {
       throw new Error(`Please set a value between 1 to 14`);
     }
 
-    let currentTravelerCount = await $(
-      "[id='traveler_selector_adult_step_input-0']"
-    ).getValue();
-    currentTravelerCount = parseInt(currentTravelerCount);
-    console.log(`Current traveler count is: ${currentTravelerCount}`);
+    let currentCount = parseInt(
+      await $("[id='traveler_selector_adult_step_input-0']").getValue()
+    );
 
-    if (currentTravelerCount < desiredCount) {
-      this.countIncreaseAdultsTravelers(currentTravelerCount, desiredCount);
-    } else if (currentTravelerCount > desiredCount) {
-      this.countDecreaseAdultsTravelers(currentTravelerCount, desiredCount);
+    if (currentCount < desiredCount) {
+      await this.countIncreaseAdultsTravelers(currentCount, desiredCount);
+    } else if (currentCount > desiredCount) {
+      await this.countDecreaseAdultsTravelers(currentCount, desiredCount);
     }
   }
 
-  async countIncreaseAdultsTravelers(currentTravelerCount, desiredCount) {
-    console.log(currentTravelerCount);
-    console.log(desiredCount);
-    for (
-      currentTravelerCount;
-      currentTravelerCount < desiredCount;
-      currentTravelerCount++
-    ) {
-      console.log(`Current traveler count din for: ${currentTravelerCount}`);
+  async countIncreaseAdultsTravelers(currentCount, desiredCount) {
+    for (currentCount; currentCount < desiredCount; currentCount++) {
       await $('div:nth-child(2) > div > div > button:nth-child(3)').click();
-      await browser.pause(200);
+      browser.pause(200);
     }
   }
 
-  async countDecreaseAdultsTravelers(currentTravelerCount, desiredCount) {
-    for (
-      currentTravelerCount;
-      currentTravelerCount > desiredCount;
-      currentTravelerCount--
-    ) {
+  async countDecreaseAdultsTravelers(currentCount, desiredCount) {
+    for (currentCount; currentCount > desiredCount; currentCount--) {
       await $('div:nth-child(2) > div > div > button:nth-child(1)').click();
-      await browser.pause(200);
+      browser.pause(200);
     }
   }
 

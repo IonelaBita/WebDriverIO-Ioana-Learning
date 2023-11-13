@@ -5,6 +5,7 @@ import Generic from '../pageobjects/generic.js';
 Given(/^I open the "([^"]*)" site$/, async function (sit) {
   await HomePage.openSite(sit);
   // a
+  // first branch comment
   // Ioana Second branch comment
 });
 

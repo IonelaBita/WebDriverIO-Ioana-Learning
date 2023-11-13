@@ -4,6 +4,7 @@ import Generic from '../pageobjects/generic.js';
 
 Given(/^I open the "([^"]*)" site$/, async function (sit) {
   await HomePage.openSite(sit);
+  // a
 });
 
 When(/^I click on the "([^"]*)"$/, async function (element) {

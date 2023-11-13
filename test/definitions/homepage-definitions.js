@@ -6,6 +6,7 @@ Given(/^I open the "([^"]*)" site$/, async function (sit) {
   await HomePage.openSite(sit);
   // a
   // first branch comment
+  // Ioana Second branch comment
 });
 
 When(/^I click on the "([^"]*)"$/, async function (element) {

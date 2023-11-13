@@ -49,3 +49,50 @@ When(
 When(/^I set the travelers count to "([^"]*)"$/, async function (desiredCount) {
   await HomePage.increaseOrDecreaseValue(desiredCount);
 });
+
+When(
+  /^I choose a random hotel from the hotel search results list$/,
+  async function () {
+    await HomePage.chooseRandomHotel();
+  }
+);
+
+When(
+  /^I validate that the name of the randomly chosen hotel matches the name from the hotel details page$/,
+  async function () {
+    await HomePage.validateRandomlyChosenHotelName();
+  }
+);
+
+When(/^I switch to tab "([^"]*)"$/, async function (desiredTab) {
+  await HomePage.switchTab(desiredTab);
+});
+
+When(/^I choose a random room from the hotel$/, async function () {
+  await HomePage.chooseRandomRoom();
+});
+
+When(/^I select an option with a specific value$/, async function () {
+  await HomePage.selectOption();
+});
+
+Then(
+  /^I validate that the name of the randomly room chosen hotel matches the name from the hotel payment details$/,
+  async function () {
+    await HomePage.learnChaiExpect();
+  }
+);
+
+Then(
+  /^I validate that the "([^"]*)" with failed transaction is displayed "([^"]*)"$/,
+  async function (element, expectedText) {
+    await HomePage.validateErrorMessage(element, expectedText);
+  }
+);
+
+Then(
+  /^I verify the "([^"]*)" to be autocompleted with: "([^"]*)" and then I delete it$/,
+  async function (element, text) {
+    await HomePage.verifyTheAutocompleteTextBoxes(element, text);
+  }
+);

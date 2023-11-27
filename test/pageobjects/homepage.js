@@ -182,7 +182,6 @@ class HomePage {
   }
 
   async chooseRandomHotel() {
-    // await browser.pause(3000);
     await $("section [aria-label='Loading']").waitForDisplayed();
     await $("section [aria-label='Loading']").waitForDisplayed({
       reverse: true,

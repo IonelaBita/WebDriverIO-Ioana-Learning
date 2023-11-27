@@ -22,7 +22,13 @@ Feature: Exercises
 
   @exercise5
   Scenario: As a user, I want to learn while function 
-    When Execute while function
+    # When Execute while function
+    # When I print numbers from 1 to 100
+    # When I calculate the sum of numbers from 1 to 100
+    # When I count down from 1 to 10
+    # When I verify if a number is prime
+    When I try to learn switch statement
+    
 
 
 

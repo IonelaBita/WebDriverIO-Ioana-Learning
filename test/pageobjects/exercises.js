@@ -181,7 +181,78 @@ class Exercises {
   }
 
   whileExercise() {
-    {
+    let a = 0;
+    while (a < 20) {
+      if (a % 2 === 0) {
+        console.log(a);
+      }
+      a++;
+    }
+  }
+
+  whilePrintNumbers() {
+    let b = 1;
+    while (b <= 10) {
+      console.log(b);
+      b++;
+    }
+  }
+
+  whileSumNumbers() {
+    let startNumber = 1;
+    let sum = 0;
+    while (startNumber <= 100) {
+      sum += startNumber;
+      startNumber++;
+    }
+    console.log(sum);
+  }
+
+  whileCountDown() {
+    let f = 10;
+    while (f >= 1) {
+      console.log(f);
+      f--;
+    }
+  }
+
+  findPrimeNumbers() {
+    let num = 1;
+    while (num < 100) {
+      num++;
+
+      let count = 2;
+      let isPrime = true;
+      while (count <= Math.sqrt(num)) {
+        console.log(`count is ${count}`);
+        console.log(`num is ${num}`);
+        console.log(`radacina patrata: ${Math.sqrt(num)}`);
+        if (num % count === 0) {
+          isPrime = false;
+          console.log(`false ${false}`);
+          break;
+        }
+        count++;
+      }
+      if (isPrime) {
+        console.log(isPrime);
+        console.log(`${num} is a prime number`);
+      }
+    }
+  }
+
+  switchStatement() {
+    let expr = 'Mangoes';
+    switch (expr) {
+      case 'Oranges':
+        console.log('Oranges are $0.59 a pound.');
+        break;
+      case 'Mangoes':
+      case 'Papayas':
+        console.log('Mangoes and papayas are $2.79 a pound.');
+        break;
+      default:
+        console.log(`Sorry, we are out of ${expr}.`);
     }
   }
 }

@@ -44,3 +44,23 @@ When(/^Execute for function$/, function () {
 When(/^Execute while function$/, function () {
   Exercises.whileExercise();
 });
+
+When(/^I print numbers from 1 to 100$/, function () {
+  Exercises.whilePrintNumbers();
+});
+
+When(/^I calculate the sum of numbers from 1 to 100$/, function () {
+  Exercises.whileSumNumbers();
+});
+
+When(/^I count down from 1 to 10$/, function () {
+  Exercises.whileCountDown();
+});
+
+When(/^I verify if a number is prime$/, function () {
+  Exercises.findPrimeNumbers();
+});
+
+When(/^I try to learn switch statement$/, function () {
+  Exercises.switchStatement();
+});

@@ -53,7 +53,7 @@ export const config = {
       browserName: 'chrome',
       browserVersion: 'stable',
       'goog:chromeOptions': {
-        args: ['--enable-automation'],
+        args: ['--enable-automation', '--headless'],
       },
     },
   ],
